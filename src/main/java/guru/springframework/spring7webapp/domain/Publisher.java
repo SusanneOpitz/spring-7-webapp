@@ -6,6 +6,10 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * Created by myself.
+ */
+
 @Entity
 public class Publisher {
 

@@ -26,9 +26,11 @@ public class Book {
         return authors;
     }
 
+    //added by myself (code von ChatGPT)
     @ManyToOne(fetch = FetchType.LAZY) // many books -> one publisher
     @JoinColumn(name = "publisher_id") // FK column in book table
     private Publisher publisher;
+    //added by myself  end
 
 
     public void setAuthors(Set<Author> authors) {
