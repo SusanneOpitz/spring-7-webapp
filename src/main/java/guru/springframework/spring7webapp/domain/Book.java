@@ -26,8 +26,21 @@ public class Book {
         return authors;
     }
 
+    @ManyToOne(fetch = FetchType.LAZY) // many books -> one publisher
+    @JoinColumn(name = "publisher_id") // FK column in book table
+    private Publisher publisher;
+
+
     public void setAuthors(Set<Author> authors) {
         this.authors = authors;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
     }
 
     public Long getId() {
